@@ -51,10 +51,7 @@ class NotificationServices {
       final Map<String, dynamic> message = {
         'message': {
           'token': token,
-          'notification': {
-            'title': 'New Request!!',
-            'body': 'Someone need Jain Food!!'
-          }
+          'data': {'title': 'New Request!!', 'body': 'Someone need Jain Food!!'}
         }
       };
 
