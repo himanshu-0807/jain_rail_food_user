@@ -169,12 +169,13 @@ class _DeliveryFormState extends State<DeliveryForm> {
                 controller: _compartmentController,
                 label: 'Compartment',
                 icon: Icons.directions_bus,
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
               ),
               _buildTextField(
                 controller: _seatNumberController,
                 label: 'Seat Number',
                 icon: Icons.chair,
+                keyboardType: TextInputType.number,
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 16.0),

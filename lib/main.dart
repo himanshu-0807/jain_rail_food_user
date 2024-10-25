@@ -10,10 +10,16 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
+  FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+    print('A notification was opened: ${message.messageId}');
+    // Navigate to a specific screen if needed based on notification data
+  });
+
   runApp(
     MyApp(),
   );
 }
+
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print('Handling a background message: ${message.messageId}');
   // Handle background message UI updates or actions here
